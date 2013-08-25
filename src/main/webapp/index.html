@@ -1,21 +1,23 @@
 <!doctype html>
 <html lang="da" ng-app="Kata1">
-
-
     <head>
 
+        <!-- Meta information -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Codingkatas | Kata 1</title>
 
+        <!-- twitter bootstrap styles and app specific style. Note that the app.css i placed last - to override from bootstrap -->
         <link href="css/bootstrap-3.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-3.0/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet">
 
+        <!-- jQuery and AngularJS. jQuery must be first in line register it self for use by AngularJS -->
         <script src="res/jquery-2.0.3.min.js"></script>
         <script src="res/angular.min.1.2.0.js"></script>
 
+        <!-- The app code itself. You must use the code from HomeController -->
         <script src="app/kata1/util.js"></script>
         <script src="app/kata1/app.js"></script>
         <script src="app/kata1/HomeController"></script>
@@ -36,13 +38,16 @@
         <div class="container">
 
             <div class="template" ng-controller="kata1.home.HomeController">
+
                 <h1>Kata 1 - AngularJS and twitter bootstrap</h1>
+
                 <table class="table">
                     <tr ng-repeat="todo in todoList">
                         <td>{{ todo.subject }}</td>
                         <td><input type="checkbox" ng-model="todo.done"></td>
                     </tr>
                 </table>
+
             </div>
 
         </div>
