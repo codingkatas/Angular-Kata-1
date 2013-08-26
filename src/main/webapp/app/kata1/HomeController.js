@@ -28,3 +28,4 @@ kata1.home.HomeController = function ($scope) {
     $scope.todoList = todoList;
 
 };
+
