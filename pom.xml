@@ -55,38 +55,49 @@
                     </fileNames>
                 </configuration>
             </plugin>
-		    <plugin>
-		      <groupId>org.codehaus.mojo</groupId>
-		      <artifactId>jslint-maven-plugin</artifactId>
-		      <version>1.0.1</version>
-		      <configuration>
-		      	<sourceJsFolder>src/main/webapp/app</sourceJsFolder>
-		      	
-		      </configuration>
-		      <executions>
-		        <execution>
-		          <goals>
-		            <goal>jslint</goal>
-		            <goal>test-jslint</goal>
-		          </goals>
-		        </execution>
-		      </executions>
-		    </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jslint-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <configuration>
+                    <sourceJsFolder>src/main/webapp/app</sourceJsFolder>
+                    <failOnIssues>true</failOnIssues>
+                    <allowOneVarStatementPerFunction>false</allowOneVarStatementPerFunction>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jslint</goal>
+                            <goal>test-jslint</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>com.github.searls</groupId>
                 <artifactId>jasmine-maven-plugin</artifactId>
                 <version>1.3.1.2</version>
                 <configuration>
-                    <jsSrcDir>${project.basedir}/src/main/webapp/app</jsSrcDir>
+                    <webDriverClassName>org.openqa.selenium.phantomjs.PhantomJSDriver</webDriverClassName>
+                    <webDriverCapabilities>
+                        <phantomjs.binary.path>src/test/resources/phantomjs/phantomjs.exe</phantomjs.binary.path>
+                    </webDriverCapabilities>
+                    <jsSrcDir>${project.basedir}/src/main/webapp/</jsSrcDir>
                     <sourceIncludes>
-                        <include>**/util.js</include>
-                        <include>**/bootstrap.js</include>
-                        <include>**/services.js</include>
-                        <include>**/*.js</include>
+                        <include>res/sugar-1.3.9.min.js</include>
+                        <include>res/jquery-2.0.3.js</include>
+                        <include>res/angular-min.1.2.0.js</include>
+                        <include>res/angular-1.1.5/angular-resource.js</include>
+                        <include>res/angular-1.1.5/angular-cookies.js</include>
+                        <include>res/angular-1.1.5/angular-mocks.js</include>
+                        <include>res/ui-bootstrap-tpls-0.4.0.js</include>
+                        <include>app/oef/util.js</include>
+                        <include>app/oef/**/*.js</include>
                     </sourceIncludes>
-                    <jsTestSrcDir>${project.basedir}/src/test/webapp</jsTestSrcDir>
+                    <jsTestSrcDir>${project.basedir}/src/test/webapp/</jsTestSrcDir>
                     <specIncludes>
-                        <include>app/**/*-spec.js</include>
+                        <include>resources/lib/angular-mocks-1.0.6.js</include>
+                        <include>app/**/*Test.js</include>
                     </specIncludes>
                     <serverPort>8234</serverPort>
                     <skipTests>false</skipTests>
@@ -95,15 +106,11 @@
                     <haltOnFailure>true</haltOnFailure>
 
                     <preloadSources>
-                        <source>${project.basedir}/src/main/webapp/resources/lib/angular-1.0.6.js</source>
-                        <source>${project.basedir}/src/main/webapp/resources/lib/angular-resource-1.0.6.js</source>
+                        <source>${project.basedir}/src/main/webapp/resources/lib/angular.js</source>
                     </preloadSources>
 
-                    <!--
-                    <customRunnerTemplate>
-                        ${project.basedir}/src/main/resources/jasmine-templates/SpecRunner.htmltemplate
-                    </customRunnerTemplate>
-                    -->
+                    <!-- <customRunnerTemplate> ${project.basedir}/src/main/resources/jasmine-templates/SpecRunner.htmltemplate
+                        </customRunnerTemplate> -->
                     <junitXmlReportFileName>TEST-jasmine.xml</junitXmlReportFileName>
                     <sourceEncoding>utf-8</sourceEncoding>
                 </configuration>
@@ -115,6 +122,7 @@
                     </execution>
                 </executions>
             </plugin>
+
 
         </plugins>
     </build>

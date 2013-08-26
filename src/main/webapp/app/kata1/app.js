@@ -4,7 +4,7 @@
  regexp : true, sloppy : true, vars : false,
  white : false
  */
-/*global window, angular, kata1 */
+/*global namespace, log, window, angular, kata1 */
 
 namespace('kata1');
 
