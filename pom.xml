@@ -86,18 +86,21 @@
                     <sourceIncludes>
                         <include>res/sugar-1.3.9.min.js</include>
                         <include>res/jquery-2.0.3.js</include>
-                        <include>res/angular-min.1.2.0.js</include>
-                        <include>res/angular-1.1.5/angular-resource.js</include>
-                        <include>res/angular-1.1.5/angular-cookies.js</include>
-                        <include>res/angular-1.1.5/angular-mocks.js</include>
-                        <include>res/ui-bootstrap-tpls-0.4.0.js</include>
-                        <include>app/oef/util.js</include>
-                        <include>app/oef/**/*.js</include>
+                        <include>res/lib/angular-1.2.0/angular.min.js</include>
+                        <include>res/lib/angular-1.2.0/angular-animate.min.js</include>
+                        <include>res/lib/angular-1.2.0/angular-cookies.min.js</include>
+                        <include>res/lib/angular-1.2.0/angular-loader.min.js</include>
+                        <include>res/lib/angular-1.2.0/angular-resource.min.js</include>
+                        <include>res/lib/angular-1.2.0/angular-route.min.js</include>
+                        <include>res/lib/angular-1.2.0/angular-mocks.js</include>
+                        <include>res/lib/ui-bootstrap-tpls-0.5.0.min.js</include>
+                        <include>app/kata1/util.js</include>
+                        <include>app/kata1/**/*.js</include>
                     </sourceIncludes>
                     <jsTestSrcDir>${project.basedir}/src/test/webapp/</jsTestSrcDir>
                     <specIncludes>
-                        <include>resources/lib/angular-mocks-1.0.6.js</include>
-                        <include>app/**/*Test.js</include>
+                        <include>res/lib/angular-1.2.0/angular-mocks.js</include>
+                        <include>app/**/*Spec.js</include>
                     </specIncludes>
                     <serverPort>8234</serverPort>
                     <skipTests>false</skipTests>

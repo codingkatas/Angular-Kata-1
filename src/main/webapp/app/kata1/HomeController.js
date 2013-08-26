@@ -9,7 +9,7 @@
 namespace('kata1.home');
 
 kata1.home.HomeController = function ($scope) {
-
+    log('initializing...');
     var todoList = [
         {
             subject : 'Take the dishes',
