@@ -9,7 +9,7 @@
 describe('HomeController tests', function () {
 
     beforeEach(function () {
-        module('Kata1');
+        module('Kata');
     });
 
     describe('Test that HomeController provides a ToDo list', function () {
@@ -17,9 +17,8 @@ describe('HomeController tests', function () {
         var scope;
 
         beforeEach(inject(function ($controller, $rootScope) {
-            log('inject HomeController');
             scope = $rootScope.$new();
-            $controller("kata1.home.HomeController", {
+            $controller("kata.home.HomeController", {
                 $scope: scope
             });
         }));

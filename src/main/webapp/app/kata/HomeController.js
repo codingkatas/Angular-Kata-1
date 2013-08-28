@@ -6,9 +6,9 @@
  */
 /*global namespace, log, window, angular, kata1 */
 
-namespace('kata1.home');
+namespace('kata.home');
 
-kata1.home.HomeController = function ($scope) {
+kata.home.HomeController = function ($scope) {
 
     var todoList = [
         {

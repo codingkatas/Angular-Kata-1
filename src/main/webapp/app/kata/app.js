@@ -6,8 +6,8 @@
  */
 /*global namespace, log, window, angular, kata1 */
 
-namespace('kata1');
+namespace('kata');
 
-var kata1Module = angular.module('Kata1', []);
+var kataModule = angular.module('Kata', []);
 
 

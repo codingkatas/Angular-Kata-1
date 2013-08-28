@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>codingkatas</groupId>
-    <artifactId>kata_1-war</artifactId>
+    <artifactId>Angular-Kata-1</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>kata_1</name>
+    <name>Angular-Kata-1</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,7 +16,7 @@
 
 
     <build>
-        <finalName>kata_1.war</finalName>
+        <finalName>Angular-Kata-1.war</finalName>
         <plugins>
             <!--  Facilitates downloading source and javadoc in Eclipse -->
             <plugin>

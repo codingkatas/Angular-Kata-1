@@ -10,7 +10,7 @@ describe('Kata 1', function () {
 
     it('should show a list of three todos using a html table tag and twitter bootstrap', function () {
 
-        expect(repeater('.table tr').count()).toBe(3);
+        expect(repeater('.table tbody tr').count()).toBe(3);
 
     });
 
