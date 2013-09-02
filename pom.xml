@@ -18,18 +18,6 @@
     <build>
         <finalName>Angular-Kata-1.war</finalName>
         <plugins>
-            <!--  Facilitates downloading source and javadoc in Eclipse -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-eclipse-plugin</artifactId>
-                <version>2.8</version>
-                <configuration>
-                    <wtpversion>2.0</wtpversion>
-                    <downloadSources>true</downloadSources>
-                    <downloadJavadocs>true</downloadJavadocs>
-                </configuration>
-            </plugin>
-
 
             <!--  Ensures we are compiling at 1.6 level -->
             <plugin>
@@ -94,8 +82,8 @@
                         <include>lib/angular-1.2.0/angular-route.min.js</include>
                         <include>lib/angular-1.2.0/angular-mocks.js</include>
                         <include>lib/ui-bootstrap-tpls-0.5.0.min.js</include>
-                        <include>app/kata1/util.js</include>
-                        <include>app/kata1/**/*.js</include>
+                        <include>app/kata/util.js</include>
+                        <include>app/kata/**/*.js</include>
                     </sourceIncludes>
                     <jsTestSrcDir>${project.basedir}/src/test/webapp/</jsTestSrcDir>
                     <specIncludes>
