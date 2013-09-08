@@ -18,3 +18,5 @@ Also, to style the table correct, check the twitter bootstrap website.
 For both, use google to find them :-)
 
 When you are are ready, there is a link in the bottom of the page, which you can click to test your skills :-)
+
+You can check out the solution by cloning the 'solution' branch of this repository.
